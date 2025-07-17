@@ -5,7 +5,7 @@ const Category = require('../models/Category');
 
 // Get all categories
 router.get('/', async (req, res) => {
-  try {
+  try {  
     const categories = await Category.find();
     res.status(200).json(categories);
   } catch (error) {
